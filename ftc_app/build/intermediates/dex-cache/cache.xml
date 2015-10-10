@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Ali Lichtenberg\FTC\ftc7641-RESQ\ftc_app\FtcRobotController\build\intermediates\exploded-aar\Hardware-release\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="312452430a607b39b92221fbed687e458ed9c8c7">
+        <dex dex="C:\Users\Ali Lichtenberg\FTC\ftc7641-RESQ\ftc_app\FtcRobotController\build\intermediates\pre-dexed\debug\classes-89c47f248805d3c8801fb0514ffc8e48bb2dd8ae.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ali Lichtenberg\FTC\ftc7641-RESQ\ftc_app\FtcRobotController\build\intermediates\exploded-aar\FtcCommon-release\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9112d15701e2c29945597c234eb28110f3e77ddc">
+        <dex dex="C:\Users\Ali Lichtenberg\FTC\ftc7641-RESQ\ftc_app\FtcRobotController\build\intermediates\pre-dexed\debug\classes-c67b12511aa06ce0e0e2cf85fa1069ea8a1c4cd1.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ali Lichtenberg\FTC\ftc7641-RESQ\ftc_app\FtcRobotController\build\intermediates\exploded-aar\RobotCore-release\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="51740db7999259bcef8a679f349034c760ceb172">
+        <dex dex="C:\Users\Ali Lichtenberg\FTC\ftc7641-RESQ\ftc_app\FtcRobotController\build\intermediates\pre-dexed\debug\classes-f152b3cbc187cdd116fcd60b5c8bbda5e9145539.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ali Lichtenberg\FTC\ftc7641-RESQ\ftc_app\FtcRobotController\build\intermediates\exploded-aar\Analytics-release\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="be03c1ee2c4c731033845ec1846923138dc9e0fa">
+        <dex dex="C:\Users\Ali Lichtenberg\FTC\ftc7641-RESQ\ftc_app\FtcRobotController\build\intermediates\pre-dexed\debug\classes-253c287a92c487089a107d7ee9e7931450c020fb.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ali Lichtenberg\FTC\ftc7641-RESQ\ftc_app\FtcRobotController\build\intermediates\exploded-aar\ModernRobotics-release\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="78166ead5f1793270fb95aff9f878f98331ac6e9">
+        <dex dex="C:\Users\Ali Lichtenberg\FTC\ftc7641-RESQ\ftc_app\FtcRobotController\build\intermediates\pre-dexed\debug\classes-5f5df2da24b7b1343f8051270f3fa5b70c2508ee.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ali Lichtenberg\FTC\ftc7641-RESQ\ftc_app\FtcRobotController\build\intermediates\exploded-aar\WirelessP2p-release\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5f9e5d9a3cadf7329bbbaea6def0fb86d3773a2">
+        <dex dex="C:\Users\Ali Lichtenberg\FTC\ftc7641-RESQ\ftc_app\FtcRobotController\build\intermediates\pre-dexed\debug\classes-4294106e2da07ec43c06f422fa72c5668abdd879.jar" />
+    </item>
+
+</items>
