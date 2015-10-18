@@ -66,8 +66,10 @@ public class K9TankDrive extends OpMode {
 	// amount to change the claw servo position by
 	double clawDelta = 0.1;
 
-	DcMotor motorRight;
-	DcMotor motorLeft;
+	DcMotor motorRightPrimary;
+	DcMotor motorRightSecondary;
+	DcMotor motorLeftPrimary;
+	DcMotor motorLeftSecondary;
 	Servo claw;
 	Servo arm;
 
@@ -101,9 +103,12 @@ public class K9TankDrive extends OpMode {
 		 *    "servo_1" controls the arm joint of the manipulator.
 		 *    "servo_6" controls the claw joint of the manipulator.
 		 */
-		motorRight = hardwareMap.dcMotor.get("motor_2");
-		motorLeft = hardwareMap.dcMotor.get("motor_1");
-		motorLeft.setDirection(DcMotor.Direction.REVERSE);
+		motorRightPrimary = hardwareMap.dcMotor.get("motor_2");
+		motorLeftPrimary = hardwareMap.dcMotor.get("motor_1");
+		motorRightSecondary = hardwareMap.dcMotor.get("motor_4");
+		motorLeftSecondary = hardwareMap.dcMotor.get("motor_3");
+		motorLeftPrimary.setDirection(DcMotor.Direction.REVERSE);
+		motorLeftSecondary.setDirection(DcMotor.Direction.REVERSE);
 		
 		arm = hardwareMap.servo.get("servo_1");
 		claw = hardwareMap.servo.get("servo_6");
@@ -143,8 +148,10 @@ public class K9TankDrive extends OpMode {
 		left =  (float)scaleInput(left);
 		
 		// write the values to the motors
-		motorRight.setPower(right);
-		motorLeft.setPower(left);
+		motorRightPrimary.setPower(right);
+		motorLeftPrimary.setPower(left);
+		motorRightSecondary.setPower(right);
+		motorLeftSecondary.setPower(left);
 
 		// update the position of the arm.
 		if (gamepad1.a) {
