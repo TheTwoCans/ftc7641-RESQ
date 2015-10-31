@@ -47,13 +47,11 @@ public class K9Line extends OpMode {
 	final static double HOLD_IR_SIGNAL_STRENGTH = 0.20; // Higher values will cause the robot to follow closer
 	final static double LIGHT_THRESHOLD = 0.5;
 
-	double armPosition;
-	double clawPosition;
 
-	DcMotor motorRight;
-	DcMotor motorLeft;
-	Servo claw;
-	Servo arm;
+	DcMotor motorRightPrimary;
+	DcMotor motorRightSecondary;
+	DcMotor motorLeftPrimary;
+	DcMotor motorLeftSecondary;
 	LightSensor reflectedLight;
 	
 	/**
@@ -87,16 +85,15 @@ public class K9Line extends OpMode {
 		 *    "servo_1" controls the arm joint of the manipulator.
 		 *    "servo_6" controls the claw joint of the manipulator.
 		 */
-		motorRight = hardwareMap.dcMotor.get("motor_2");
-		motorLeft = hardwareMap.dcMotor.get("motor_1");
-		motorLeft.setDirection(DcMotor.Direction.REVERSE);
-		
-		arm = hardwareMap.servo.get("servo_1");
-		claw = hardwareMap.servo.get("servo_6");
+		motorRightPrimary = hardwareMap.dcMotor.get("motor-1");
+		motorLeftPrimary = hardwareMap.dcMotor.get("motor-3");
+		motorRightSecondary = hardwareMap.dcMotor.get("motor-4");
+		motorLeftSecondary = hardwareMap.dcMotor.get("motor-2");
+		motorLeftPrimary.setDirection(DcMotor.Direction.REVERSE);
+		motorLeftSecondary.setDirection(DcMotor.Direction.REVERSE);
 
 		// set the starting position of the wrist and claw
-		armPosition = 0.2;
-		clawPosition = 0.25;
+
 
 		/*
 		 * We also assume that we have a LEGO light sensor
@@ -119,8 +116,6 @@ public class K9Line extends OpMode {
 		double left, right = 0.0;
 		
 		// keep manipulator out of the way.
-		arm.setPosition(armPosition);
-		claw.setPosition(clawPosition);
 
         /*
          * As a temporary fix, turn on LED in run() event rather than in start().
@@ -155,8 +150,10 @@ public class K9Line extends OpMode {
 		/*
 		 * set the motor power
 		 */
-		motorRight.setPower(left);
-		motorLeft.setPower(right);
+		motorRightPrimary.setPower(right);
+		motorLeftPrimary.setPower(left);
+		motorRightSecondary.setPower(right);
+		motorLeftSecondary.setPower(left);
 
 		/*
 		 * Send telemetry data back to driver station. Note that if we are using
