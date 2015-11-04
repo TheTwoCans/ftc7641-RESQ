@@ -146,6 +146,9 @@ public class K9TankDrive extends OpMode {
 		motorLeftPrimary.setPower(left);
 		motorRightSecondary.setPower(right);
 		motorLeftSecondary.setPower(left);
+		motorRightPrimary.getCurrentPosition();
+		motorLeftPrimary.getCurrentPosition();
+
 
 
 
