@@ -39,7 +39,7 @@ import com.qualcomm.robotcore.hardware.Servo;
 /**
  * TeleOp Mode
  * <p>
- * Enables control of the robot via the gamepad
+ * Enables control of the robot via the gamepadd
  */
 public class K9Line extends OpMode {
 	
