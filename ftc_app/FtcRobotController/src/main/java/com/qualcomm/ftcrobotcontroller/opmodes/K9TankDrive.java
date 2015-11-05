@@ -103,9 +103,9 @@ public class K9TankDrive extends OpMode {
 		 *    "servo_6" controls the claw joint of the manipulator.
 		 */
 		motorRightPrimary = hardwareMap.dcMotor.get("motor-1");
-		motorLeftPrimary = hardwareMap.dcMotor.get("motor-3");
+		motorLeftPrimary = hardwareMap.dcMotor.get("motor-2");
 		motorRightSecondary = hardwareMap.dcMotor.get("motor-4");
-		motorLeftSecondary = hardwareMap.dcMotor.get("motor-2");
+		motorLeftSecondary = hardwareMap.dcMotor.get("motor-3");
 		motorLeftPrimary.setDirection(DcMotor.Direction.REVERSE);
 		motorLeftSecondary.setDirection(DcMotor.Direction.REVERSE);
 
@@ -132,22 +132,21 @@ public class K9TankDrive extends OpMode {
         float left = -gamepad1.left_stick_y;
         float right = -gamepad1.right_stick_y;
 
-		// clip the right/left values so that the values never exceed +/- 1
-		right = Range.clip(right, -1, 1);
-		left = Range.clip(left, -1, 1);
+        // clip the right/left values so that the values never exceed +/- 1
+        right = Range.clip(right, -1, 1);
+        left = Range.clip(left, -1, 1);
 
-		// scale the joystick value to make it easier to control
-		// the robot more precisely at slower speeds.
-		right = (float)scaleInput(right);
-		left =  (float)scaleInput(left);
-		
-		// write the values to the motors
-		motorRightPrimary.setPower(right);
-		motorLeftPrimary.setPower(left);
-		motorRightSecondary.setPower(right);
-		motorLeftSecondary.setPower(left);
-		motorRightPrimary.getCurrentPosition();
-		motorLeftPrimary.getCurrentPosition();
+        // scale the joystick value to make it easier to control
+        // the robot more precisely at slower speeds.
+        right = (float) scaleInput(right);
+        left = (float) scaleInput(left);
+
+        // write the values to the motors
+        motorRightPrimary.setPower(right);
+        motorLeftPrimary.setPower(left);
+        motorRightSecondary.setPower(right);
+        motorLeftSecondary.setPower(left);
+        float encoder = motorRightPrimary.getCurrentPosition();
 
 
 
@@ -159,8 +158,10 @@ public class K9TankDrive extends OpMode {
 		 * will return a null value. The legacy NXT-compatible motor controllers
 		 * are currently write only.
 		 */
+        telemetry.addData("Text", "*** Robot Data***");
+        telemetry.addData("distance", "Revolutions: " + Double.toString(encoder * 2240));
 
-	}
+    }
 
 	/*
 	 * Code to run when the op mode is first disabled goes here
